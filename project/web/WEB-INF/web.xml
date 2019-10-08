@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+<servlet>
+    <servlet-name>UserLogin</servlet-name>
+    <servlet-class>cn.jbit.controller.UserLogin</servlet-class>
+</servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserLogin</servlet-name>
+        <url-pattern>/userLogin</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>NewsServlet</servlet-name>
+        <servlet-class>cn.jbit.controller.NewsServlet</servlet-class>
+
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>NewsServlet</servlet-name>
+        <url-pattern>/newsServlet</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>TopicServlet</servlet-name>
+        <servlet-class>cn.jbit.controller.TopicServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TopicServlet</servlet-name>
+        <url-pattern>/topicServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NewsOneServlet</servlet-name>
+        <servlet-class>cn.jbit.controller.NewsOneServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewsOneServlet</servlet-name>
+        <url-pattern>/NewsOneServlet</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>

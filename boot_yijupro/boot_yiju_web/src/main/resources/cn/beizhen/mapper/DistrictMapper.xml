@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.beizhen.mapper.DistrictMapper">
+    <select id="getAll" resultType="java.util.Map">
+        SELECT a.district_name as 'id',GROUP_CONCAT(b.id,',',b.district_name) as '市'
+            FROM district a
+                     LEFT JOIN
+                     district b
+                     ON a.id = b.pid
+            WHERE a.type = 1
+            GROUP BY a.district_name
+            ORDER BY CONVERT( a.district_name USING gbk )  COLLATE gbk_chinese_ci ASC;
+    </select>
+    <select id="findByInput" resultType="string">
+        SELECT  district_name from district where type=#{type}  and district_name like concat(#{district_name},'%') limit 0,1
+    </select>
+</mapper>

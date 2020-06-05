@@ -1,0 +1,53 @@
+@charset "utf-8";
+div {
+    display: block;
+}
+
+::selection {
+    background-color: rgba(48,114,246,0.2);
+    color:red;
+   /* color: #333;*/
+}
+.city_selection_section {
+    width: 1150px;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+body, div, p {
+    margin: 0;
+    padding: 0;
+}
+
+.city_selection_section .city_recommend {
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+ body {
+     font-size: 14px;
+     color: rgb(16, 29, 55);
+     font-family: "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei", 微软雅黑, "Segoe UI", Tahoma, 宋体b8b体, SimSun, sans-serif;
+     text-rendering: optimizelegibility;
+     text-size-adjust: 100%;
+     -webkit-font-smoothing: antialiased;
+ }
+html {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+user agent stylesheet
+
+::selection {
+    background-color: rgba(48,114,246,0.2);
+    color: #333;
+}
+.wrapper {
+    width: 1150px;
+    position: relative;
+}
+.main-top {
+    width: 100%;
+    background: #ffffff;
+}

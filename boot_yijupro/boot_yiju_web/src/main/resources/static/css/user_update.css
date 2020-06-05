@@ -1,0 +1,51 @@
+*{						/* 首先设置所有边距什么的为零 */
+	padding: 0 0;
+	margin: 0 auto;
+}
+a{
+	float: right;
+	color: white;
+}
+
+/* form整体边框 */
+.login-box {
+    width: 360px;
+    height: 450px;
+	margin: 8% auto;
+	z-index: 1;
+	position: relative;
+	
+}
+.login-box .login_inner {    
+    overflow: hidden;
+    padding: 30px 50px; 
+	
+}
+.login_inner #loginForm .input-group .submit_btn .auto_login input {
+	text-align: center;
+} 
+.auto_login {
+   margin-top: 10px;
+   width: 210px;
+}
+.submit_btn  span {
+	padding-bottom: 20px;
+}
+.submit_btn #wangpassword{
+	float: right;
+	color: white;
+}
+
+/* -------------------------------------------------------------------------------- */
+#loginpills{
+	width: 115px;
+	margin-left: 20px;
+}
+#registerpills{
+	width: 115px;
+	
+}
+/* ------------------------------- */
+#updatephone{
+	width: 135px;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.beizhen.mapper.User_collectionMapper">
+    <select id="searchCollectionByType" resultType="cn.beizhen.entity.House">
+        select * from house where renttype=#{renttype} and
+	    id in(SELECT house_Id from user_collection where user_Id=#{user_Id})
+    </select>
+
+    <select id="findCount" resultType="int">
+         SELECT count(collection_id) from user_collection where house_Id=#{house_Id}
+    </select>
+</mapper>

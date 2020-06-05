@@ -1,0 +1,69 @@
+*{						/* 首先设置所有边距什么的为零 */
+	padding: 0 0;
+	margin: 0 auto;
+}
+a{
+	float: right;
+	color: white;
+}
+.login-box-bag{
+	width: 360px;
+	height: 480px;
+	border-radius:20px;
+	z-index: -1;
+	border: 1px solid black;
+	position: absolute;
+	background: black;
+	opacity: 0.4;
+	background-size: cover;
+	background-attachment: fixed;
+}
+/* form整体边框 */
+.login-box {
+    width: 360px;
+    height: 450px;
+	margin: 10% auto;
+	border-radius:20px;
+	z-index: 1;
+	position: relative;
+}
+/* title  */
+.login-box .title {
+    padding:0 30px; 
+	z-index: 1;
+}
+.login-box .title .yijulogo {
+	width: 180px;
+	margin-top: 10%;
+	margin-left: 60px;
+	z-index: 1;
+}
+.login-box .login_inner {    
+    overflow: hidden;
+    padding: 30px 50px; 
+	
+}
+.login_inner #loginForm .input-group .submit_btn .auto_login input {
+	text-align: center;
+} 
+.auto_login {
+   margin-top: 10px;
+   width: 210px;
+}
+.submit_btn  span {
+	padding-bottom: 20px;
+}
+.submit_btn #wangpassword{
+	float: right;
+	color: white;
+}
+
+/* -------------------------------------------------------------------------------- */
+#loginpills{
+	width: 100px;
+	margin-left: 70px;
+}
+#registerpills{
+	width: 100px;
+	margin-left: 50px;
+}

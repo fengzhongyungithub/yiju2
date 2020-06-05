@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.beizhen.mapper.UserMapper">
+    <select id="userOne" resultType="cn.beizhen.entity.User" parameterType="map">
+        SELECT * FROM user
+        <where>
+            <if test="userid != null">
+                and userid = #{userid}
+            </if>
+            <if test="username != null">
+                and username = #{username}
+            </if>
+            <if test="userpassowrd != null">
+                and userpassowrd = #{userpassowrd}
+            </if>
+            <if test="sex != null">
+                and sex = #{sex}
+            </if>
+            <if test="name !
+            = null">
+                and name = #{name}
+            </if>
+            <if test="birthday != null">
+                and birthday = #{birthday}
+            </if>
+            <if test="createtime != null">
+                and createtime = #{createtime}
+            </if>
+            <if test="updatetime != null">
+                and updatetime = #{updatetime}
+            </if>
+            <if test="phone != null">
+                and  phone = #{phone}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="last_login_time != null">
+                and last_login_time = #{last_login_time}
+            </if>
+        </where>
+   </select>
+
+    <insert id="userRegister" parameterType="User">
+        insert user
+        values(DEFAULT,#{username},#{userpassowrd},#{sex},#{name},#{birthday},#{createtime},#{updatetime},#{head_pic},#{phone},#{status},#{last_login_time})
+    </insert>
+    <select id="getPage" resultType="cn.beizhen.entity.House">
+        SELECT * from house where id in (SELECT house_Id  from collection as Collection where user_Id =#{tenantId})
+    </select>
+  <select id="findUser" resultType="cn.beizhen.entity.User">
+        select phone,head_pic,name,sex from user where userid=#{userid}
+    </select>
+
+    <update id="updateUser" parameterType="cn.beizhen.entity.User">
+        UPDATE user
+        <trim prefix="set" suffixOverrides=",">
+            <if test="username != null">
+                username = #{username}
+            </if>
+            <if test="userpassowrd != null">
+                userpassowrd = #{userpassowrd}
+            </if>
+            <if test="name != null">
+                 name = #{name}
+            </if>
+            <if test="birthday != null">
+                birthday = #{birthday}
+            </if>
+            <if test="createtime != null">
+                 createtime = #{createtime}
+            </if>
+            <if test="updatetime != null">
+                 updatetime = #{updatetime}
+            </if>
+            <if test="phone != null">
+                  phone = #{phone}
+            </if>
+            <if test="last_login_time != null">
+                last_login_time = #{last_login_time}
+            </if>
+        </trim>
+        where userid = #{userid}
+    </update>
+
+    <select id="getPass" resultType="String">
+        SELECT userpassowrd from user where userid=#{userid}
+    </select>
+
+    <select id="getPhone" resultType="cn.beizhen.entity.User">
+        SELECT phone,userid from user  where userid=#{userid}
+    </select>
+    <update id="Updatephone" parameterType="cn.beizhen.entity.User">
+            update user set phone=#{phone} where  userid=#{userid}
+    </update>
+</mapper>

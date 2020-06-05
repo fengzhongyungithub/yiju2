@@ -1,0 +1,272 @@
+.search_input {
+	height: 40px;
+}
+
+/* ------轮播图图片-------------- */
+#img_content img {
+	width: 100%;
+	height: 500px;
+}
+
+.swiper-container {
+	--swiper-pagination-color: #1393C5;
+	/* 两种都可以 */
+}
+
+/* ------轮播图图片完-------------- */
+/*精选*/
+#content {
+	margin-bottom: 60px;
+	margin-top: 40px;
+}
+
+.hemai_jx {
+	width: 1300px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+/* -------------各个头部------------------- */
+.jx_top {
+	width: 1300px;
+	height: 35px;
+	line-height: 35px;
+	margin: 0 auto;
+	margin-top: 25px;
+	border-bottom: 2px solid #1393C5;
+	
+}
+
+.jx_tit,
+.jx_tabs {
+	float: left;
+}
+
+.jx_tit {
+	width: 250px;
+	height: 35px;
+	line-height: 35px;
+}
+
+.jx_tit .span_bag {
+	display: inline-block;
+	width: 150px;
+	height: 33px;
+	border-bottom: none;
+	transform: skew(-30deg);
+	margin-left: 10px;
+	position: absolute;
+	background: #1393C5;
+	text-align: center;
+}
+.jx_tit .spancontext{
+	text-align: center;
+	color: white;
+	display: inline-block;
+	transform: skew(30deg);
+	font-size: 17px;
+}
+.jx_tit img {
+	vertical-align: top;
+	float: left;
+}
+
+/* -------------各个头部完------------------- */
+.jx_tabs {
+	list-style: none;
+	margin-bottom: 0;
+	height: 35px;
+	margin-left: 180px;
+}
+
+.jx_tabs li {
+	float: left;
+	height: 35px;
+	position: relative;
+}
+
+.jx_tabs li span {
+	display: inline-block;
+	width: 110px;
+	height: 33px;
+	border: 1px solid #f0f0f0;
+	border-bottom: none;
+	transform: skew(-30deg);
+}
+
+.jx_tabs li a {
+	width: 110px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	position: absolute;
+	top: 0px;
+	z-index: 99;
+	text-decoration: none;
+	color: #000;
+	font-size: 15px;
+}
+
+.jx_tabs .active span {
+	background: #1393C5;
+	border: none;
+}
+
+.jx_tabs .active a {
+	color: #fff;
+}
+
+
+.jx_content .row,
+.guone_r .row {
+	margin-top: 40px;
+}
+
+.jx_content a,
+.guone_r a {
+	text-decoration: none;
+	display: block;
+}
+
+.jx_content,
+.guone_r {
+	padding: 0 6px;
+}
+
+.house_renqi {
+	width: 300px;
+	height: 230px;
+}
+
+.house_renqi:hover {
+	box-shadow: gainsboro 5px 20px 30px 5px;
+}
+
+.house_renqi_img {
+	border-radius: 10px 10px;
+	height: 150px;
+}
+.has_border h3 {
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+/****************************新房源********************************************/
+.newhouse_renqi {
+	margin-right: 30px;
+	width: 280px;
+	position: relative;
+}
+.newhas_border h3{
+	font-size: 20px;
+	margin-top: 10px;
+}
+.newhouse_renqi_img{
+	border-radius: 10px 10px;
+	height: 150px;
+}
+.houseIntroduce_bag {
+	width: 280px;
+	height: 150px;
+	border-radius: 10px;
+	/* opacity: 0.6; */
+	position: absolute;
+	top: 0;
+	background: rgba(0, 0, 0, 0.5);
+	word-wrap: break-word;/* 文字自动换行 */
+	display: none;
+}
+
+.houseIntroduce_bag h1 {
+	color: white;
+	font-size: 15px;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.houseIntroduce_bag p {
+	margin-top: 20px;
+	margin-left: 10px;
+	color: white;
+	font-size: 14px;
+}
+
+/****************************新房源完********************************************/
+.guone_r h3 {
+	margin: 5px 0;
+	padding-right: 11px;
+	font-size: 14px;
+	color: #000;
+	line-height: 24px;
+	overflow: hidden;
+	font-weight: normal;
+	background-color: #fff;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+
+.jx_content img,
+.guone_r .row img {
+	display: block;
+	width: 100%;
+}
+
+.price {
+	margin-top: 10px;
+	font-size: 15px;
+	color: #666;
+	padding-bottom: 10px;
+}
+
+.price em {
+	font-size: 12px;
+	font-style: normal;
+	color: #ff4848;
+}
+
+.price strong {
+	font-size: 20px;
+	color: #ff4848;
+	margin-right: 5px;
+}
+
+.heima_gn {
+	width: 100%;
+	overflow: hidden;
+}
+
+/* -----------------------新房源分类下面的---------------------- */
+.guonei_l,
+.guone_r {
+	width: 100%;
+}
+.guone_r {
+
+	height: 490px;
+}
+
+.guonei_l {
+	width: 360px;
+	height: 490px;
+	margin-right: 50px;
+	margin-top: 10px;
+}
+
+.guonei_l img {
+	width: 320px;
+	height: 490px;
+}
+
+
+
+.guone_r .row>div {
+	margin-top: 10px;
+}
+
+.fl {
+	float: left;
+}
+
+/* -----------------------新房源分类下面的完---------------------- */

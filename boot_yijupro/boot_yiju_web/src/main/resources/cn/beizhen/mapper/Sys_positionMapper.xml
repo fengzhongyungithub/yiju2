@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.beizhen.mapper.Sys_positionMapper">
+    <select id="findByCondition" resultType="cn.beizhen.entity.Sys_position">
+        SELECT area_name,area_code ,area_index from  sys_position where area_index
+         <if test="area_index!=null and area_index!=''">
+             =#{area_index}
+         </if>
+         <if test="area_index ==null or area_index==''">
+             is null
+         </if>
+
+    </select>
+
+    <select id="findProvince" resultType="cn.beizhen.entity.Sys_position">
+          SELECT area_name,area_code ,area_index from  sys_position where area_code=#{area_code}
+    </select>
+</mapper>

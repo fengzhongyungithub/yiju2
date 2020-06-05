@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.beizhen.mapper.House_particularsMapper">
+    <select id="House_particularsOne" resultType="House_particulars" parameterType="map">
+        SELECT * FROM house_particulars
+        <where>
+            <if test="house_id != null">
+                and house_id=#{house_id}
+            </if>
+        </where>
+    </select>
+
+      <update id="House_particularsUpdate" parameterType="cn.beizhen.entity.House_particulars">
+        UPDATE `house_particulars`
+        <trim prefix="set" suffixOverrides=",">
+            <if test="house_payment!=house_payment">
+                house_payment=#{house_payment}
+            </if>
+            <if test="adminchargeid!=adminchargeid">
+                adminchargeid=#{adminchargeid}
+            </if>
+            <if test="house_building_number!=house_building_number">
+                house_building_number=#{house_building_number}
+            </if>
+            <if test="house_element!=house_element">
+                house_element=#{house_element}
+            </if>
+            <if test="house_doorplate!=house_doorplate">
+                house_doorplate=#{house_doorplate}
+            </if>
+            <if test="house_orientation!=house_orientation">
+                house_orientation=#{house_orientation}
+            </if>
+            <if test="house_maintain!=house_maintain">
+                house_maintain=#{house_maintain}
+            </if>
+            <if test="house_checkin!=house_checkin">
+                house_checkin=#{house_checkin}
+         </if>
+            <if test="house_floorcount!=house_floorcount">
+                house_floorcount=#{house_floorcount}
+            </if>
+            <if test="house_elevator!=house_elevator">
+                house_elevator=#{house_elevator}
+        </if>
+            <if test="house_carstall!=house_carstall">
+                house_carstall=#{house_carstall}
+            </if>
+            <if test="house_water!=house_water">
+                house_water=#{house_water}
+            </if>
+            <if test="house_payment!house_payment">
+                house_payment=#{house_payment}
+            </if>
+            <if test="house_electricity!=house_electricity">
+                house_electricity=#{house_electricity}
+            </if>
+            <if test="house_fuelgas!=house_fuelgas">
+                house_fuelgas=#{house_fuelgas}
+            </if>
+            <if test="house_heating!=house_heating">
+                house_heating=#{house_heating}
+            </if>
+            <if test="house_tenancyterm!=house_tenancyterm">
+                house_tenancyterm=#{house_tenancyterm}
+            </if>
+            <if test="house_see!=house_see">
+                house_see=#{house_see}
+            </if>
+            <if test="washing!=washing">
+                washing=#{washing}
+            </if>
+            <if test="airconditioner!=airconditioner">
+                airconditioner=#{airconditioner}
+            </if>
+            <if test="closet!=closet">
+                closet=#{closet}
+            </if>
+            <if test="TV!=TV">
+                TV=#{TV}
+            </if>
+            <if test="waterheater!=waterheater">
+                waterheater=#{waterheater}
+            </if>
+            <if test="bed!=bed">
+                bed=#{bed}
+            </if>
+            <if test="heating!=heating">
+                heating=#{heating}
+            </if>
+            <if test="naturalgas!=naturalgas">
+                naturalgas=#{naturalgas}
+            </if>
+            <if test="house_user_updatedate!=house_user_updatedate">
+                house_user_updatedate=#{house_user_updatedate}
+            </if>
+        </trim>
+        particulars_id=#{particulars_id}
+        where
+    </update>
+</mapper>

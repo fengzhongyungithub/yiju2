@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.beizhen.mapper.CodeMapper">
+    <insert id="insertInfo" parameterType="cn.beizhen.entity.Code">
+        INSERT code(phone,code)VALUES(#{phone},#{code})
+    </insert>
+    <select id="getCode" resultType="String">
+        SELECT code from code where phone =#{phone}
+    </select>
+    <delete id="deletCode" >
+        DELETE from code where phone=#{phone}
+    </delete>
+    <select id="getAll" resultType="cn.beizhen.entity.Code">
+        select  * from code
+    </select>
+</mapper>

@@ -1,0 +1,63 @@
+*{
+	margin: 0px auto;
+}
+a{
+	color: black;
+	text-decoration:none;
+}
+#attention{
+	width: 800px;
+	border: 1px solid red;
+	height:auto;
+}
+/* 展示房屋 */
+#housecontext{
+/* 	border: 1px solid black; */
+	height: auto;
+	padding-bottom:20px ;
+}
+/* 一个房屋 */
+.houseinfo{
+	width: 700px;
+	margin: 0 auto;
+	height: 150px;
+	padding: 0;
+	border-bottom: 1px black dashed;
+	position: relative;
+}
+
+.houseinfo_img{
+	margin-top: 25px;
+	width: 160px;
+	height: 100px;
+}
+.houseinfo_money{
+	color: red;
+	font-size: 30px;
+	font-weight:700 ;
+	float: right;
+	margin-right: 50px;
+	margin-bottom: ;
+	position: absolute;
+	top: 40px;
+	left: 530px;
+}
+.title{
+	color: #2390C1;
+	position: absolute;
+	top: 25px;
+	left: 175px;
+}
+.house_size{
+	position: absolute;
+	top: 60px;
+	left: 175px;
+}
+.house_see{
+	position: absolute;
+	top: 90px;
+	left: 175px;
+}
+#page{
+	margin-left: 50px;
+}
